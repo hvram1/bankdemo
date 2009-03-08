@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<j:jelly
+   xmlns:j="jelly:core"
+xmlns:base64="base64"> 
+   <j:set var="plainString">Foo Is Not Bar</j:set>
+   <base64:encode var="base64String" value="${plainString}"/>
+   Plain string : ${plainString}
+   Base64 encoded : ${base64String}
+   Base64 decoded : <base64:decode>${base64String}</base64:decode>
+</j:jelly>

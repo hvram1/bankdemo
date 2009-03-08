@@ -1,0 +1,26 @@
+<Cartoon><Message id="BOC000255"><CSReq id="aabbcc"><version>1.0.1</version>
+<instId>BOCKT</instId><certId>0001</certId><date>20080313 12:39:50</date>
+<signNo>16227559F0001C20191B61D82603012277C87FA8B5820</signNo>
+<cardNo>069244</cardNo><cardType>C</cardType><name>ddd</name>
+<gender>M</gender><certType>1</certType><certNo>332501197412070237</certNo>
+<email>boctiger@sohu.com</email><phone>88888888</phone><cell>13957141932</cell>
+<zipCode>310014</zipCode><address>ddddd</address></CSReq>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+<ds:Reference xmlns:ds="http://www.w3.org/2000/09/xmldsig#" URI="#BOC000255">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>d9UJBBBc0CKJQAzlXQqtjp2pv+c=</ds:DigestValue>
+</ds:Reference>
+</SignedInfo>
+<SignatureValue>
+d1WkG8bDmUP6lpx/OrPrCjTrfWgFlYk9LKJafvfSPvG3YCkdaFYIBUwnfBk6ClmMmsj5iHhgULSO
+N9q1XjGE821jPahki+bSPUlxVTPu8ME1e+GpN6Ji+q23hjCUmVOjHGtEDJWiBqwl+MtMQE+N8qhv
+GTp3KNuU5xig02Sr5X8=
+</SignatureValue>
+</Signature></Message></Cartoon>

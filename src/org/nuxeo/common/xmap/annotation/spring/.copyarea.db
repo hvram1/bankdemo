@@ -1,0 +1,10 @@
+ClearCase CopyAreaDB|4
+vobs\mapi\mapi\biz\common\src\java\org\nuxeo\common\xmap\annotation\spring
+2
+6
+f:XMapSpring.java|1|11ed44619bb|13eb|72d523d8|f0ea9308b7ba11dd9b81000e0c6392d7|0
+1b:XAnnotatedSpringObject.java|1|11ed44618a1|477|a29f8008|efba92b4b7ba11dd9b81000e0c6392d7|0
+19:XAnnotatedListSpring.java|1|11ed4461844|18f9|e78a9a3c|efba9298b7ba11dd9b81000e0c6392d7|0
+18:XAnnotatedMapSpring.java|1|11ed44618f0|10c9|50a64a09|f05a92d0b7ba11dd9b81000e0c6392d7|0
+13:XMapSpringUtil.java|1|11ed4461a18|5dd|4754f1e9|f18a9324b7ba11dd9b81000e0c6392d7|0
+15:XAnnotatedSpring.java|1|11ed446195d|823|4181bd1e|f05a92ecb7ba11dd9b81000e0c6392d7|0

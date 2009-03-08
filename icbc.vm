@@ -1,0 +1,25 @@
+<p>充值金额：</p>
+<p><strong class="TradePrice">$amount</strong> 分</p>
+<p>选择网上银行：</p>
+<img src="http://img.alipay.net/pimg/icon_zggsyh.gif" height="30" border="0" alt="工商银行"/>				    	
+<form name="sendOrder" method="post" action=$url target="_blank"  style="margin:0px;">
+	                        <input type="hidden" name="interfaceName" value="ICBC_PERBANK_B2C" />
+		    		<input type="hidden" name="interfaceVersion" value="1.0.0.0" />
+		    	        <input type="hidden" name="orderid" value="$orderNO" />
+		    	        <input type="hidden" name="amount" value="$amount" />
+		    	        <input type="hidden" name="curType" value="001" />
+		    		<input type="hidden" name="merID" value="$merID" />
+		    	        <input type="hidden" name="merAcct" value="$merAcct" />
+		    		<input type="hidden" name="verifyJoinFlag" value="0" />
+		    		<input type="hidden" name="notifyType" value="HS" />
+		    		<input type="hidden" name="merURL" value="$returnUrl" />
+		    		<input type="hidden" name="resultType" value="1" />
+		    		<input type="hidden" name="orderDate" value="$orderDate" />
+		    		<input type="hidden" name="merSignMsg" value="$sign" />
+		    		<input type="hidden" name="merCert" value="$cer" />
+		    		<input type="hidden" name="goodsID" value="88888888" />
+		    		<input type="hidden" name="goodsName" value="支付宝交易款" />
+		    		<input type="hidden" name="goodsNum" value="1" />
+		    		<input type="hidden" name="carriageAmt" value="$amount" />
+				<input type="submit" id="dsubmit1" class="AlipayButton WordSeven" value="去网上银行充值" />
+</form>
