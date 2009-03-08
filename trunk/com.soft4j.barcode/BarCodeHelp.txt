@@ -1,0 +1,101 @@
+关于条形码类的使用帮助step-by-step
+
+stephen , zhoujianqiang AT gmail DOT com 
+
+实现功能: 显示各种规格的条形码(18种),打印后可以被扫描设备扫描.
+
+1.把barcode的4个java类引入自己的项目中；
+2.在web.xml中配置一个生成条形码的servlet,如下：
+	
+	...
+	<servlet>
+		<servlet-name>CreateBarCode</servlet-name>
+		<servlet-class>com.soft4j.barcode.BarCodeServlet</servlet-class>
+	</servlet>
+	...
+	<servlet-mapping>
+		<servlet-name>CreateBarCode</servlet-name>
+		<url-pattern>/CreateBarCode</url-pattern>
+	</servlet-mapping>
+	...
+
+    这样就可以使用CreateBarCode这个servlet来生成条形码了。
+    备注:
+    (1)com.soft4j.barcode.BarCodeServlet，这里填写自己项目中的实际包路径
+    (2)关于CreateBarCode这个名字可以自行设定。
+    
+3.前台引用例子(BarcodeExample.jsp)：
+
+<%@ page contentType="text/html;charset=UTF-8"%><%
+	String code = "135792468";//条形码内容
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript">
+<!--
+NS4 = (document.layers) ? 1 : 0;
+visble_property_prefix = (NS4) ? "document.layers." : "";
+visble_property_suffix = (NS4) ? ".visibility" : ".style.display";
+visble_property_true = (NS4) ? "show" : "block";
+visble_property_false = (NS4) ? "hide" : "none";
+visble_property_printview = visble_property_prefix + "viewpanel" + visble_property_suffix;
+function nowprint() {
+	window.print();
+}
+function window.onbeforeprint() {
+	eval(visble_property_printview + " = \"" + visble_property_false + "\"");
+}
+function window.onafterprint() {
+	eval(visble_property_printview + " = \"" + visble_property_true + "\"");
+}
+//-->
+</script>
+</head>
+<body topmargin="0px" leftmargin="0px" rightmargin="0px" bottommargin="0px">
+<%	
+	StringBuffer barCode = new StringBuffer();
+	barCode.append("<img src='");
+	barCode.append(request.getContextPath());
+	barCode.append("/CreateBarCode?code=");
+	barCode.append(code);
+	barCode.append("&barType=CODE39&checkCharacter=n&checkCharacterInText=n'>");
+	out.println(barCode.toString());
+%>
+<div id="viewpanel" align="center">
+<input name="bequery" type="button" value="打  印" style="cursor:hand;" onclick="nowprint();">
+</div>
+<!--script>nowprint();</script-->
+</body>
+</html>  
+    
+
+4.关于条形码使用时可以设置的一些参数：
+  ------------------------------------
+  barType(默认为CODE128):   条码类型.支持18钟类型,分别是 CODE39,CODE39EXT,INTERLEAVED25,CODE11,CODABAR,MSI,UPCA,IND25,MAT25,CODE93,EAN13,EAN8,UPCE,CODE128,CODE93EXT,POSTNET,PLANET,UCC128 .
+  code:   要打印的条码内容.    
+  width(默认为自适应,一般不用自行设置):   图片宽度.width,height要同时都设置才有效.     
+  height(默认为自适应,一般不用自行设置):   图片高度.width,height要同时都设置才有效.     
+  st(默认为y显示):   是否显示条码内容(show   text).默认会在条码图片下方显示条码内容,有效值为y和n.     
+  textFont(默认为Arial|PLAIN|11):   条码文本的字体,字体有效格式为<font   name>|<style>|<size>.Style可以是PLAIN,ITALIC或BOLD.     
+  fontColor(默认为黑色):   条码文本的颜色,有效值为RED,BLUE,GREEN,BLACK,GRAY,LIGHTGRAY,WHITE,DARKGRAY,YELLOW,ORANGE,CYAN和MAGENTA.     
+  barColor(默认为黑色):   条码的颜色.     
+  backColor(默认为白色):   图片背景颜色.     
+  rotate(默认为0):   设置条码旋转角度.有效值为0(不旋转),90(旋转90度),180(旋转180度),270(旋转270度).   
+  barHeightCM(默认为1厘米):   条码的高度.     
+  x(默认为0.03厘米,一般不用自行调整):   条码符号中窄单元的标称尺寸,最小可设置为0.001即1象素,通常以0.03递增.   
+  n(默认为2倍):   宽窄比,平均宽条的条宽与平均宽空的空宽之和(条码字符间隔不计在内)除以两倍窄单元尺寸.它是宽度调节编码法中的技术参数.   
+  leftMarginCM(默认为0.3厘米):   条码与图片左右边的距离.     
+  topMarginCM(默认为0.2厘米):   条码与图片上下边的距离.     
+  checkCharacter(默认为y,一般不用自行设置):   是否自动计算check   character,有效值为y和n.     
+  checkCharacterInText(默认为y,一般不用自行设置):   条码内容是否自动计算check   character,有效值为y和n.     
+  Code128Set(默认为0自动选择,一般不用设置):   设置CODE128中使用的字符集.有效值为0,A,B,C.     
+  UPCESytem(默认为0,一般不用自行设置):   UPCE中使用的编码系统.有效值为0和1.     
+  ------------------------------------
+  其中关键的参数主要是 barType,code 这2个.另外把checkCharacter和checkCharacterInText这2个参数设置成n,如果是y的话,会在你的条形码后面追加一个校验码,虽然不影响使用(扫描设备扫描条形码得到数据不会出现校验码),但是看着比较别扭.
+
+5.还可以在applet中使用,具体使用参数请对照BarCodeApplet.java文件,与WEB使用方式差不多.
+ 
+-------------------------------------------------------------
+分享知识 分享快乐,分享知识，分享快乐，希望文章能给需要的朋友带来小小的帮助。
+

@@ -1,0 +1,13 @@
+ClearCase CopyAreaDB|4
+vobs\mapi\mapi\biz\common\src\java\org\nuxeo\common\xmap\annotation
+2
+9
+e:XNodeList.java|1|11ed44616cd|438|7f2b43df|edfa9228b7ba11dd9b81000e0c6392d7|0
+16:XMemberAnnotation.java|1|11ed44614d9|368|8fa3fe74|ec2a919cb7ba11dd9b81000e0c6392d7|0
+6:spring|2|0|0|0|ef2a927cb7ba11dd9b81000e0c6392d7|0
+d:XContent.java|1|11ed446166f|2ae|1428e167|edfa920cb7ba11dd9b81000e0c6392d7|0
+d:XNodeMap.java|1|11ed4461602|506|b1747c7c|ed5a91f0b7ba11dd9b81000e0c6392d7|0
+c:package.html|1|11ed4461546|38|2818131b|ec2a91b8b7ba11dd9b81000e0c6392d7|0
+c:XParent.java|1|11ed44615b3|17d|f05c85ec|ed5a91d4b7ba11dd9b81000e0c6392d7|0
+a:XNode.java|1|11ed446172a|2f6|8aa9e9e8|ee8a9244b7ba11dd9b81000e0c6392d7|0
+c:XObject.java|1|11ed4461788|1f5|96d5a2f2|ef2a9260b7ba11dd9b81000e0c6392d7|0

@@ -1,0 +1,27 @@
+ClearCase CopyAreaDB|4
+vobs\mapi\mapi\biz\common\src\java\org\nuxeo\common\xmap
+2
+17
+12:XMethodSetter.java|1|11ed4461314|4e0|db4f903b|f6ea9500b7ba11dd9b81000e0c6392d7|0
+9:XMap.java|1|11ed4461248|6005|7f07ddd4|f64a94c8b7ba11dd9b81000e0c6392d7|0
+9:Path.java|1|11ed4461371|7a8|5529f5d5|f77a951cb7ba11dd9b81000e0c6392d7|0
+12:XAnnotatedMap.java|1|11ed446115e|1b8a|90f70421|f48a9420b7ba11dd9b81000e0c6392d7|0
+12:XMethodGetter.java|1|11ed4461093|6ba|3c9805d4|f3ea93e8b7ba11dd9b81000e0c6392d7|0
+15:XAnnotatedParent.java|1|11ed44612b6|4c7|2179fd|f6ea94e4b7ba11dd9b81000e0c6392d7|0
+12:XValueFactory.java|1|11ed4460c6c|213c|dde8778|ea6a9110b7ba11dd9b81000e0c6392d7|0
+e:DOMHelper.java|1|11ed446143c|1969|bdb0ef58|f8aa9554b7ba11dd9b81000e0c6392d7|0
+13:XAnnotatedList.java|1|11ed44611cb|1ff0|871b2e4c|f51a943cb7ba11dd9b81000e0c6392d7|0
+c:XSetter.java|1|11ed4460fb8|217|17c2a165|f35a93b0b7ba11dd9b81000e0c6392d7|0
+c:Context.java|1|11ed4460f4b|448|685c3b74|f2ba9394b7ba11dd9b81000e0c6392d7|0
+d:Resource.java|1|11ed4460df3|3b8|2daf21c4|f18a9340b7ba11dd9b81000e0c6392d7|0
+11:XFieldGetter.java|1|11ed4461100|478|161e6018|f3ea9404b7ba11dd9b81000e0c6392d7|0
+12:DOMSerializer.java|1|11ed4460e60|fae|d5d70484|f22a935cb7ba11dd9b81000e0c6392d7|0
+14:PrimitiveArrays.java|1|11ed4460ebe|c37|b9f86151|f22a9378b7ba11dd9b81000e0c6392d7|0
+6:spring|2|0|0|0|f51a9458b7ba11dd9b81000e0c6392d7|0
+a:annotation|2|0|0|0|eb9a9180b7ba11dd9b81000e0c6392d7|0
+c:package.html|1|11ed4460cda|7e|ad522ad3|eafa912cb7ba11dd9b81000e0c6392d7|0
+15:XAnnotatedObject.java|1|11ed4460c0f|ecb|8f7656f0|e9ca90f4b7ba11dd9b81000e0c6392d7|0
+11:XFieldSetter.java|1|11ed4460d37|45f|72b3614f|eafa9148b7ba11dd9b81000e0c6392d7|0
+15:XAnnotatedMember.java|1|11ed4460d76|18b8|bb30350a|eb9a9164b7ba11dd9b81000e0c6392d7|0
+c:XGetter.java|1|11ed4461026|291|9dacd33e|f35a93ccb7ba11dd9b81000e0c6392d7|0
+16:XAnnotatedContent.java|1|11ed44613df|820|5cfe7618|f81a9538b7ba11dd9b81000e0c6392d7|0

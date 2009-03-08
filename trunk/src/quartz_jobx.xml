@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<quartz>
+
+  <job>
+    <job-detail>
+     <name>ScanDirectory</name>
+     <group>DEFAULT</group>
+     <description>
+          A job that scans a directory for files
+     </description>
+     <job-class>
+            org.cavaness.quartzbook.chapter3.ScanDirectoryJob
+     </job-class>
+     <volatility>false</volatility>
+     <durability>false</durability>
+     <recover>false</recover>
+     <job-data-map allows-transient-data="true">
+         <entry>
+         <key>SCAN_DIR</key>
+         <value>c:\quartz-book\input</value>
+       </entry>
+     </job-data-map>
+    </job-detail>
+
+    <trigger>
+     <simple>
+       <name>scanTrigger</name>
+       <group>DEFAULT</group>
+       <job-name>ScanDirectory</job-name>
+       <job-group>DEFAULT</job-group>
+       <start-time>2005-06-10 6:10:00 PM</start-time>
+       <!-- repeat indefinitely every 10 seconds -->
+       <repeat-count>-1</repeat-count>
+       <repeat-interval>10000</repeat-interval>
+     </simple>
+    </trigger>
+
+  </job>
+</quartz>

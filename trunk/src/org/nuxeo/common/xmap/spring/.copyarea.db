@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+vobs\mapi\mapi\biz\common\src\java\org\nuxeo\common\xmap\spring
+2
+3
+13:XNodeMapSpring.java|1|11ed4461b61|517|d0ccae32|f64a94acb7ba11dd9b81000e0c6392d7|0
+10:XNodeSpring.java|1|11ed4461b03|3e9|2c5f4e34|f5ba9490b7ba11dd9b81000e0c6392d7|0
+14:XNodeListSpring.java|1|11ed4461aa5|472|4efc6d33|f51a9474b7ba11dd9b81000e0c6392d7|0
